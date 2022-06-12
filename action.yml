@@ -2,6 +2,15 @@ name: "Auto Version Tag"
 description: "Create release tags based on Cargo.toml/package.json/pyproject.toml versions."
 author: tamasfe
 inputs:
+  name:
+    description: "The user name to create the tags with."
+    required: false
+  email:
+    description: "The user e-mail to create the tags with."
+    required: false
+  token:
+    description: "GITHUB_TOKEN or PAT."
+    required: false
   paths:
     description: "space-separated paths to search for packages in."
     default: "."
