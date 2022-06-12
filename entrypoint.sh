@@ -18,6 +18,6 @@ if [ -n "${INPUT_TOKEN}" ]; then
     git remote set-url origin "https://${GITHUB_ACTOR}:${INPUT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 fi
 
-eval "auto-tag --commit $GITHUB_SHA --git-user-name $GIT_USER_NAME --git-user-email $GIT_USER_EMAIL $INPUT_PATHS"
+eval "auto-tag --git-user-name $GIT_USER_NAME --git-user-email $GIT_USER_EMAIL $INPUT_PATHS"
 
 git push --tags
